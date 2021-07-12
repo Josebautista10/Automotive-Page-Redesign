@@ -24,7 +24,7 @@ export default function Home() {
               Where performance and repair work are customer centered
             </Text>
             <Text align="center" paddingTop="50px" fontSize="3xl">
-              Come in the shop so we can show you our phenomonal “Done once done
+              Come in the shop so we can show you our phenomenal “Done once done
               right” work
             </Text>
           </Box>
@@ -37,7 +37,7 @@ export default function Home() {
           <Service name="Premium parts" img="/images/premium-parts-afr.webp" />
           <Service
             name="Performance/Tuning"
-            img="/images/peformance-tuning-afr.webp"
+            img="/images/performance-tuning-afr.webp"
           />
           <Service name="Service" img="/images/oil-afr.webp" />
           <Service name="Electrical" img="/images/electrical.jpeg" />
