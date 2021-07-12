@@ -5,7 +5,7 @@ import { customTheme } from "../lib/theme";
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={customTheme}>
-      <Meta />
+      <Meta title='FXd' />
       <Component {...pageProps} />
     </ChakraProvider>
   );
