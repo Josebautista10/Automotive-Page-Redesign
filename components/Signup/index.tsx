@@ -1,9 +1,9 @@
 import { useToast, Button } from "@chakra-ui/react"
 
-export const  Toast=() =>{
+export const  SignUpButton=() =>{
   const toast = useToast()
   return (
-    <Button
+    <Button color="black"
       onClick={() =>
         toast({
           title: "Account created.",
@@ -14,7 +14,7 @@ export const  Toast=() =>{
         })
       }
     >
-      {props.label}
+    Sign Up!
     </Button>
   )
 }
