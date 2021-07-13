@@ -1,15 +1,30 @@
 import { Header } from '../components/header';
-import { Box, Heading, Text, SimpleGrid, Flex } from '@chakra-ui/react';
 import { Service } from '../components/service';
+import { CarouselImage } from '../components/carousel-image';
+import { SignUpButton } from '../components/Signup';
+import { TiSocialInstagram } from 'react-icons/Ti';
+import {
+  Box,
+  Heading,
+  Text,
+  SimpleGrid,
+  HStack,
+  FormLabel,
+  Input,
+  FormHelperText,
+  FormControl,
+  OrderedList,
+  UnorderedList,
+  ListItem,
+  Button,
+  Link,
+} from '@chakra-ui/react';
+import React from 'react';
 
 export default function Home() {
   return (
     <>
-      <Box
-        width="100vw"
-        background="brand.100"
-        color="brand.300"
-      >
+      <Box width="100vw" background="brand.100" color="brand.300">
         <Header></Header>
         <Box
           backgroundImage="/images/afr-image.webp"
@@ -30,6 +45,7 @@ export default function Home() {
           </Box>
         </Box>
         <SimpleGrid
+          bgGradient="linear(to-t, #53D8EF, #000000)"
           spacing="10px"
           columns={{ base: 1, md: 2, lg: 4 }}
           padding="30px"
@@ -42,35 +58,156 @@ export default function Home() {
           <Service name="Service" img="/images/oil-afr.webp" />
           <Service name="Electrical" img="/images/electrical.jpeg" />
         </SimpleGrid>
-        <Box bgGradient="linear(to-b, #53D8EF, #000000)">
-          <Text
-            bgClip="text"
-            bgGradient="linear(to-br, #000000, #FFFFFF)"
-            fontSize="48px"
-            marginLeft="400px"
-            marginBottom="10px"
-            fontWeight="bolder"
-          >
-            ABOUT US
-          </Text>
-          <Flex padding="50px">
-            <Box maxWidth="50%">
-              <Text fontSize="25px" fontWeight="semibold" marginBottom="20px">
-                Looking for a local shop you can entrust your vehicle to? We
-                started AFR Autoworks in order to provide the best service at a
-                fair price. Our technicians are knowledgable, we are well
-                equipped, and can tackle the simplest repair to the most
-                technical of challenges.
+        <HStack bgGradient="linear(to-b, #53D8EF, #000000)">
+          <Box maxWidth="50%">
+            <Text
+              align="center"
+              bgClip="text"
+              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              fontSize="48px"
+
+              fontWeight="bolder"
+            >
+              ABOUT US
+            </Text>
+            <Text
+              fontSize="25px"
+              fontWeight="semibold"
+              marginBottom="20px"
+              align="center"
+            >
+              Looking for a local shop you can entrust your vehicle to? We
+              started AFR Autoworks in order to provide the best service at a
+              fair price. Our technicians are knowledgable, we are well
+              equipped, and can tackle the simplest repair to the most technical
+              of challenges.
+            </Text>
+            <Text fontSize="25px" fontWeight="semibold" align="center">
+              We Service all makes and models, modified or stock, wether you're
+              after a simple oil change and inspection or you're after some
+              Performance upgrades and Dyno tuning we have you covered!
+            </Text>
+          </Box>
+          <Box align="center">
+            <CarouselImage></CarouselImage>
+          </Box>
+        </HStack>
+        <HStack bgGradient="linear(to-t, #53D8EF, #000000)">
+          <Box maxWidth="49%">
+            <Text
+              align="center"
+              bgClip="text"
+              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              fontSize="40px"
+              fontWeight="bolder"
+              marginBottom="35px"
+            >
+              AFR Autoworks
+            </Text>
+            <Text
+              fontSize="25px"
+              fontWeight="semibold"
+              marginBottom="20px"
+              align="center"
+            >
+              Love Your Car. Do What Others Don't to get Results That Others
+              Won't.
+            </Text>
+          </Box>
+          <Box maxWidth="49%" align="center">
+            <Box>
+              <Text
+                align="center"
+                bgClip="text"
+                bgGradient="linear(to-br, #000000, #FFFFFF)"
+                fontSize="48px"
+                fontWeight="bolder"
+              >
+                Never Miss a Newsletter
               </Text>
-              <Text fontSize="25px" fontWeight="semibold">
-                We Service all makes and models, modified or stock, wether
-                you're after a simple oil change and inspection or you're after
-                some Performance upgrades and Dyno tuning we have you covered!
-              </Text>
+              <FormControl id="email" is="required">
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" placeholder="afr@email.com" />
+                <Box align="center" marginTop="20px" width="">
+                  <SignUpButton></SignUpButton>
+                </Box>
+                <FormHelperText align="center" fontWeight="bolder">
+                  We'll never share your email.
+                </FormHelperText>
+              </FormControl>
             </Box>
-            <Box>images</Box>
-          </Flex>
-        </Box>
+          </Box>
+        </HStack>
+        <HStack bgGradient="linear(to-b, #53D8EF, #000000)">
+          <Box maxWidth="49%">
+            <Text
+              align="center"
+              bgClip="text"
+              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              fontSize="36px"
+              fontWeight="bolder"
+            >
+              Business Hours
+            </Text>
+            <UnorderedList
+              align="center"
+              fontSize="25px"
+              fontWeight="semibold"
+              styleType="none"
+              marginBottom="20px"
+              width="100%"
+            >
+              <ListItem>Monday 8:30am–12pm, 1–5pm</ListItem>
+              <ListItem>Tuesday 8:30am–12pm, 1–5pm</ListItem>
+              <ListItem>Wednesday 8:30am–12pm, 1–5pm</ListItem>
+              <ListItem>Thursday 8:30am–12pm, 1–5pm</ListItem>
+              <ListItem> Friday 8:30am–12pm, 1–5pm</ListItem>
+            </UnorderedList>
+          </Box>
+          <Box maxWidth="49%">
+            <Text
+              align="center"
+              marginBottom="5%"
+              bgClip="text"
+              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              fontSize="36px"
+              fontWeight="bolder"
+            >
+              Contact US
+            </Text>
+            <Text
+              fontSize="25px"
+              fontWeight="semibold"
+              marginBottom="20px"
+              align="center"
+            >
+              (403)-392-1278 sales@afrautoworks.com
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              align="center"
+              bgClip="text"
+              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              fontSize="36px"
+              fontWeight="bolder"
+              marginLeft="10px"
+            >
+              Take a look at some of our work
+            </Text>
+            <Box align="center">
+              <Link
+                href="https://www.instagram.com/afrautoworks/?hl=en"
+                isExternal
+              >
+                <TiSocialInstagram
+                  size="60px"
+                  onClick={() => console.log('icon')}
+                />
+              </Link>
+            </Box>
+          </Box>
+        </HStack>
       </Box>
     </>
   );
