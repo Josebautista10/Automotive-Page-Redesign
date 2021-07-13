@@ -13,11 +13,12 @@ import {
   Input,
   FormHelperText,
   FormControl,
-  OrderedList,
   UnorderedList,
   ListItem,
   Button,
   Link,
+  Flex,
+  Image
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -58,8 +59,8 @@ export default function Home() {
           <Service name="Service" img="/images/oil-afr.webp" />
           <Service name="Electrical" img="/images/electrical.jpeg" />
         </SimpleGrid>
-        <HStack bgGradient="linear(to-b, #53D8EF, #000000)">
-          <Box maxWidth="50%">
+        <Flex bgGradient="linear(to-b, #53D8EF, #000000)" flexDirection={{base:"column", lg:"row"}}>
+          <Box>
             <Text
               align="center"
               bgClip="text"
@@ -88,12 +89,11 @@ export default function Home() {
               Performance upgrades and Dyno tuning we have you covered!
             </Text>
           </Box>
-          <Box align="center">
-            <CarouselImage></CarouselImage>
-          </Box>
-        </HStack>
-        <HStack bgGradient="linear(to-t, #53D8EF, #000000)">
-          <Box maxWidth="49%">
+
+            <Image minWidth="50%" src="/about-us/white-skyline.jpeg" alt="white-skyline" />
+        </Flex>
+        <Flex flexDirection={{base:"column", lg:"row"}} bgGradient="linear(to-t, #53D8EF, #000000)">
+          <Box>
             <Text
               align="center"
               bgClip="text"
@@ -114,7 +114,7 @@ export default function Home() {
               Won't.
             </Text>
           </Box>
-          <Box maxWidth="49%" align="center">
+          <Box align="center">
             <Box>
               <Text
                 align="center"
@@ -137,9 +137,9 @@ export default function Home() {
               </FormControl>
             </Box>
           </Box>
-        </HStack>
-        <HStack bgGradient="linear(to-b, #53D8EF, #000000)">
-          <Box maxWidth="49%">
+        </Flex>
+        <Flex flexDirection={{base:"column", lg:"row"}} bgGradient="linear(to-b, #53D8EF, #000000)">
+          <Box >
             <Text
               align="center"
               bgClip="text"
@@ -164,7 +164,7 @@ export default function Home() {
               <ListItem> Friday 8:30am–12pm, 1–5pm</ListItem>
             </UnorderedList>
           </Box>
-          <Box maxWidth="49%">
+          <Box >
             <Text
               align="center"
               marginBottom="5%"
@@ -207,7 +207,7 @@ export default function Home() {
               </Link>
             </Box>
           </Box>
-        </HStack>
+        </Flex>
       </Box>
     </>
   );
