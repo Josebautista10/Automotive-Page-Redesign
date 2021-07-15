@@ -1,6 +1,10 @@
-import { Box, Image, HStack, Flex, Link } from '@chakra-ui/react';
+import { Box, Image, Flex, Link, Spacer } from '@chakra-ui/react';
 import React from 'react';
 import { MobileMenu } from '../mobile-menu';
+import { SiSubaru, SiMitsubishi } from 'react-icons/Si';
+import { BiHomeAlt } from 'react-icons/bi';
+import { MdTune } from 'react-icons/md';
+import { AiOutlineShop } from 'react-icons/ai';
 
 export const Header = () => {
   return (
@@ -15,23 +19,40 @@ export const Header = () => {
           <Box>
             <Image src="/images/afr-logo.png" width="150px" marginLeft="70px" />
           </Box>
-          <Box
-            display={{base:"block", lg:"none"}}>
-                  <MobileMenu></MobileMenu>
+          <Box display={{ base: 'block', lg: 'none' }}>
+            <MobileMenu></MobileMenu>
           </Box>
-          <HStack
-            display={{ base: 'none', lg: 'block' }}
-            justifyContent="center"
-            spacing="60px"
-            fontSize="2xl"
-            fontWeight="bolder"
+          <Flex
+            display={{ base: 'none', lg: 'contents' }}
+            justifyContent="space-evenly"
+            color="white"
           >
-            <Link>Home</Link>
-            <Link>Subaru</Link>
-            <Link>Mitsubishi</Link>
-            <Link>Tuning</Link>
-            <Link>Shop</Link>
-          </HStack>
+            <Spacer />
+            <Link href="/">
+              <BiHomeAlt size="40px" />
+            </Link>
+            <Spacer />
+
+            <Link href="/subaru">
+              <SiSubaru size="40px" />
+            </Link>
+            <Spacer />
+
+            <Link href="/mitsubishi">
+              <SiMitsubishi size="40px" />
+            </Link>
+            <Spacer />
+
+            <Link href="/tuning">
+              <MdTune size="40px" />
+            </Link>
+            <Spacer />
+
+            <Link href="/shop">
+              <AiOutlineShop size="40px" />
+            </Link>
+            <Spacer />
+          </Flex>
         </Flex>
       </Box>
     </>

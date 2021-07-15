@@ -1,4 +1,3 @@
-import { Header } from '../components/header';
 import { Service } from '../components/service';
 import { CarouselImage } from '../components/carousel-image';
 import { SignUpButton } from '../components/Signup';
@@ -26,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Box width="100vw" background="brand.100" color="brand.300">
-        <Header></Header>
+        {/* <Header></Header> */}
         <Box
           backgroundImage="/images/afr-image.webp"
           backgroundPosition="center"
@@ -64,8 +63,8 @@ export default function Home() {
             <Text
               align="center"
               bgClip="text"
-              bgGradient="linear(to-br, #000000, #FFFFFF)"
-              fontSize="48px"
+              fontSize="40px"
+              color="white"
 
               fontWeight="bolder"
             >
@@ -75,7 +74,9 @@ export default function Home() {
               fontSize="25px"
               fontWeight="semibold"
               marginBottom="20px"
-              align="center"
+              align="left"
+              maxWidth = "80%"
+              marginLeft="5%"
             >
               Looking for a local shop you can entrust your vehicle to? We
               started AFR Autoworks in order to provide the best service at a
@@ -83,7 +84,11 @@ export default function Home() {
               equipped, and can tackle the simplest repair to the most technical
               of challenges.
             </Text>
-            <Text fontSize="25px" fontWeight="semibold" align="center">
+            <Text fontSize="25px"
+              fontWeight="semibold"
+              align="left"
+              maxWidth = "80%"
+              marginLeft="5%">
               We Service all makes and models, modified or stock, wether you're
               after a simple oil change and inspection or you're after some
               Performance upgrades and Dyno tuning we have you covered!
@@ -97,7 +102,7 @@ export default function Home() {
             <Text
               align="center"
               bgClip="text"
-              bgGradient="linear(to-br, #000000, #FFFFFF)"
+              color="white"
               fontSize="40px"
               fontWeight="bolder"
               marginBottom="35px"
@@ -108,7 +113,9 @@ export default function Home() {
               fontSize="25px"
               fontWeight="semibold"
               marginBottom="20px"
-              align="center"
+              align="left"
+              maxWidth="80%"
+              marginLeft="5%"
             >
               Love Your Car. Do What Others Don't to get Results That Others
               Won't.
@@ -119,7 +126,7 @@ export default function Home() {
               <Text
                 align="center"
                 bgClip="text"
-                bgGradient="linear(to-br, #000000, #FFFFFF)"
+                color="white"
                 fontSize="48px"
                 fontWeight="bolder"
               >
@@ -138,76 +145,7 @@ export default function Home() {
             </Box>
           </Box>
         </Flex>
-        <Flex flexDirection={{base:"column", lg:"row"}} bgGradient="linear(to-b, #53D8EF, #000000)">
-          <Box >
-            <Text
-              align="center"
-              bgClip="text"
-              bgGradient="linear(to-br, #000000, #FFFFFF)"
-              fontSize="36px"
-              fontWeight="bolder"
-            >
-              Business Hours
-            </Text>
-            <UnorderedList
-              align="center"
-              fontSize="25px"
-              fontWeight="semibold"
-              styleType="none"
-              marginBottom="20px"
-              width="100%"
-            >
-              <ListItem>Monday 8:30am–12pm, 1–5pm</ListItem>
-              <ListItem>Tuesday 8:30am–12pm, 1–5pm</ListItem>
-              <ListItem>Wednesday 8:30am–12pm, 1–5pm</ListItem>
-              <ListItem>Thursday 8:30am–12pm, 1–5pm</ListItem>
-              <ListItem> Friday 8:30am–12pm, 1–5pm</ListItem>
-            </UnorderedList>
-          </Box>
-          <Box >
-            <Text
-              align="center"
-              marginBottom="5%"
-              bgClip="text"
-              bgGradient="linear(to-br, #000000, #FFFFFF)"
-              fontSize="36px"
-              fontWeight="bolder"
-            >
-              Contact US
-            </Text>
-            <Text
-              fontSize="25px"
-              fontWeight="semibold"
-              marginBottom="20px"
-              align="center"
-            >
-              (403)-392-1278 sales@afrautoworks.com
-            </Text>
-          </Box>
-          <Box>
-            <Text
-              align="center"
-              bgClip="text"
-              bgGradient="linear(to-br, #000000, #FFFFFF)"
-              fontSize="36px"
-              fontWeight="bolder"
-              marginLeft="10px"
-            >
-              Take a look at some of our work
-            </Text>
-            <Box align="center">
-              <Link
-                href="https://www.instagram.com/afrautoworks/?hl=en"
-                isExternal
-              >
-                <TiSocialInstagram
-                  size="60px"
-                  onClick={() => console.log('icon')}
-                />
-              </Link>
-            </Box>
-          </Box>
-        </Flex>
+        
       </Box>
     </>
   );
