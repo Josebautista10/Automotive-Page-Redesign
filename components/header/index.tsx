@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Link, Spacer } from '@chakra-ui/react';
+import { Box, Image, Flex, Link, Tooltip, Icon } from '@chakra-ui/react';
 import React from 'react';
 import { MobileMenu } from '../mobile-menu';
 import { SiSubaru, SiMitsubishi } from 'react-icons/Si';
@@ -9,9 +9,8 @@ import { AiOutlineShop } from 'react-icons/ai';
 export const Header = () => {
   return (
     <>
-      <Box bgGradient="linear(to-t,  #000000 ,#53D8EF)">
+      <Box bgGradient="linear(to-t,  #000000 ,#53D8EF)" paddingRight="40px">
         <Flex
-          // marginRight="310px"889
           alignItems="center"
           justifyContent="space-between"
           bgGradient="linear(to-r, green.200, pink.500"
@@ -27,31 +26,35 @@ export const Header = () => {
             justifyContent="space-evenly"
             color="white"
           >
-            <Spacer />
-            <Link href="/">
-              <BiHomeAlt size="40px" />
-            </Link>
-            <Spacer />
+            <Tooltip label="Home" aria-label="A tooltip">
+              <Link href="/">
+                < Icon _hover={{ color: 'brand.100'}} as={BiHomeAlt} boxSize="40px" />
+              </Link>
+            </Tooltip>
 
-            <Link href="/subaru">
-              <SiSubaru size="40px" />
-            </Link>
-            <Spacer />
+            <Tooltip label="Subaru" aria-label="A tooltip">
+              <Link href="/subaru">
+                < Icon _hover={{ color: 'brand.100'}} as={SiSubaru} boxSize="40px"/>
+              </Link>
+            </Tooltip>
 
-            <Link href="/mitsubishi">
-              <SiMitsubishi size="40px" />
-            </Link>
-            <Spacer />
+            <Tooltip label="Mitsubishi" aria-label="A tooltip">
+              <Link href="/mitsubishi">
+                < Icon _hover={{ color: 'brand.100'}} as={SiMitsubishi} boxSize="40px"/>
+              </Link>
+            </Tooltip>
 
-            <Link href="/tuning">
-              <MdTune size="40px" />
-            </Link>
-            <Spacer />
+            <Tooltip label="Tuning" aria-label="A tooltip">
+              <Link href="/tuning">
+                <Icon _hover={{ color: 'brand.100'}} as={MdTune} boxSize="40px"/>
+              </Link>
+            </Tooltip>
 
-            <Link href="/shop">
-              <AiOutlineShop size="40px" />
-            </Link>
-            <Spacer />
+            <Tooltip label="Shop" aria-label="A tooltip">
+              <Link href="/shop">
+                <Icon _hover={{ color: 'brand.100'}} as={AiOutlineShop} boxSize="40px"/>
+              </Link>
+            </Tooltip>
           </Flex>
         </Flex>
       </Box>

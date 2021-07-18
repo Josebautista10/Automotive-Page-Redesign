@@ -6,18 +6,21 @@ import {
   ListItem,
   Link,
   Flex,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import React from 'react';
 export const Footer = () => {
   return (
     <>
-      <Flex
+      <SimpleGrid
         flexDirection={{ base: 'column', lg: 'row' }}
         bgGradient="linear(to-b, #53D8EF, #000000)"
+        columns={{base:1, md:3}}
+        padding="20px"
       >
         <Box>
           <Text
-            align="center"
+            align="left"
             bgClip="text"
             color="white"
             fontSize="36px"
@@ -26,14 +29,15 @@ export const Footer = () => {
             Business Hours
           </Text>
           <UnorderedList
-            align="center"
+            align="left"
             fontSize="20px"
             fontWeight="semibold"
             styleType="none"
+            margin="0"
             marginBottom="20px"
-            // marginLeft="5%"
             width="100%"
             color="white"
+
           >
             <ListItem>Monday 8:30am–12pm, 1–5pm</ListItem>
             <ListItem>Tuesday 8:30am–12pm, 1–5pm</ListItem>
@@ -44,7 +48,7 @@ export const Footer = () => {
         </Box>
         <Box>
           <Text
-            align="center"
+            align="left"
             marginBottom="5%"
             bgClip="text"
             color="white"
@@ -57,25 +61,25 @@ export const Footer = () => {
             fontSize="25px"
             fontWeight="semibold"
             marginBottom="20px"
-            marginLeft="5%"
-            align="center"
+            align="left"
             maxWidth="90%"
+            color="white"
           >
             (403)-392-1278 sales@afrautoworks.com
           </Text>
         </Box>
         <Box>
           <Text
-            align="center"
+            align="left"
             bgClip="text"
             color="white"
             fontSize="36px"
             fontWeight="bolder"
             marginLeft="10px"
           >
-            Take a look at some of our work
+            Follow us
           </Text>
-          <Box align="center">
+          <Box align="left">
             <Link
               href="https://www.instagram.com/afrautoworks/?hl=en"
               isExternal
@@ -88,7 +92,7 @@ export const Footer = () => {
             </Link>
           </Box>
         </Box>
-      </Flex>
+      </SimpleGrid>
     </>
   );
 };

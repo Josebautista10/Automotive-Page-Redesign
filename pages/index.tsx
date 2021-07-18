@@ -25,7 +25,6 @@ export default function Home() {
   return (
     <>
       <Box width="100vw" background="brand.100" color="brand.300">
-        {/* <Header></Header> */}
         <Box
           backgroundImage="/images/afr-image.webp"
           backgroundPosition="center"
@@ -88,7 +87,8 @@ export default function Home() {
               fontWeight="semibold"
               align="left"
               maxWidth = "80%"
-              marginLeft="5%">
+              marginLeft="5%"
+              >
               We Service all makes and models, modified or stock, wether you're
               after a simple oil change and inspection or you're after some
               Performance upgrades and Dyno tuning we have you covered!
