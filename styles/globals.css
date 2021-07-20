@@ -14,3 +14,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.embla {
+
+
+  overflow: hidden;
+
+}
+.embla__container {
+  display: flex;
+  font-size: 50px;
+} 
+.embla__slide {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 100%;
+  background-color:rgba(0,0,0,.5);
+  height:500px
+}
+
