@@ -3,7 +3,7 @@ import { Meta } from '../lib/meta';
 import { customTheme } from '../lib/theme';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
-import '../styles/globals.css';
+
 
 function MyApp({ Component, pageProps }) {
   return (

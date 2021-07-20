@@ -10,11 +10,12 @@ const colors = {
 };
 
 const fonts = {
-  object: {
     heading: '"Roboto", sans-serif',
     body: '"Poppins", sans-serif',
     mono: "Menlo, monospace",
-  },
 };
+const textStyles = {
+  carouselText: { fontSize:'40px',}
+}
 
-export const customTheme = extendTheme({ colors, fonts });
+export const customTheme = extendTheme({ colors, fonts, textStyles });

@@ -9,13 +9,12 @@ import { InfoSelection } from '../components/info-section';
 export default function Subaru() {
   return (
     <>
-      <Box width="100vw" background="black" color="brand.300" height="100%">
+      <Box width="100vw" background="black" color="brand.300">
         <Box
-          backgroundImage="/subaru/background-subaru.jpeg"
+          backgroundImage="https://afrautoworks.com/x/cdn/?https://storage.googleapis.com/production-websitebuilder-v1-0-5/275/555275/wSkrtqJm/70a5edee41014f539dea5f8e554488da"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
-          
         >
           <EmblaCarousel></EmblaCarousel>
         </Box>
