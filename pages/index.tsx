@@ -1,5 +1,4 @@
 import { Service } from '../components/service';
-import { CarouselImage } from '../components/carousel-image';
 import { SignUpButton } from '../components/Signup';
 import { TiSocialInstagram } from 'react-icons/Ti';
 import {
