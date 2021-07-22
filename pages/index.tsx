@@ -1,6 +1,6 @@
 import { Service } from '../components/service';
 import { SignUpButton } from '../components/Signup';
-import { TiSocialInstagram } from 'react-icons/Ti';
+
 import {
   Box,
   Heading,

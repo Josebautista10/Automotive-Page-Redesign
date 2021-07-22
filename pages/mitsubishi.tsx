@@ -6,15 +6,16 @@ import {
 import { EmblaCarousel } from '../components/carousel-image';
 import { InfoSelection } from '../components/info-section';
 
-export default function Subaru() {
+export default function Mitsubishi() {
   return (
     <>
-      <Box width="100vw" background="black" color="brand.300">
+      <Box width="100vw" background="black" color="brand.300" height="100%">
         <Box
-          backgroundImage="https://afrautoworks.com/x/cdn/?https://storage.googleapis.com/production-websitebuilder-v1-0-5/275/555275/wSkrtqJm/70a5edee41014f539dea5f8e554488da"
-          backgroundPosition="center"
+          backgroundImage="http://speedhunters-wp-production.s3.amazonaws.com/wp-content/uploads/2020/04/06033718/stefan-kotze-speedhunters-evo-x-233-1200x800.jpg"
+          backgroundPosition="bottom"
           backgroundRepeat="no-repeat"
-          backgroundSize="cover"
+          backgroundSize="cover" 
+          
         >
           <EmblaCarousel></EmblaCarousel>
         </Box>

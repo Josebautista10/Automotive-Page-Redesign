@@ -1,4 +1,4 @@
-import { TiSocialInstagram } from 'react-icons/Ti';
+import { TiSocialInstagram } from 'react-icons/ti';
 import {
   Box,
   Text,
