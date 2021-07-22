@@ -1,7 +1,7 @@
 import { Box, Image, Flex, Link, Tooltip, Icon } from '@chakra-ui/react';
 import React from 'react';
 import { MobileMenu } from '../mobile-menu';
-import { SiSubaru, SiMitsubishi } from 'react-icons/Si';
+import { SiSubaru, SiMitsubishi } from 'react-icons/si';
 import { BiHomeAlt } from 'react-icons/bi';
 import { MdTune } from 'react-icons/md';
 import { AiOutlineShop } from 'react-icons/ai';
